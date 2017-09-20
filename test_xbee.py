@@ -18,7 +18,8 @@ while True:
         ser.write(COMMAND[str_cmd])
         str_cmd=str_cmd+1
 
-    bytesToRead = ser.inWaiting()
-    print bytesToRead
-    #reps=ser.read(bytesToRead)
-    #print reps
+    time.sleep(1)
+    #bytesToRead = ser.inWaiting()
+    #print bytesToRead
+    reps=ser.read(100)
+    print reps
