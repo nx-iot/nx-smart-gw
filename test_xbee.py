@@ -19,5 +19,6 @@ while True:
         str_cmd=str_cmd+1
 
     bytesToRead = ser.inWaiting()
-    reps=ser.read(bytesToRead)
-    print reps
+    print bytesToRead
+    #reps=ser.read(bytesToRead)
+    #print reps
