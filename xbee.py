@@ -1,4 +1,4 @@
-from xbee import XBee, ZigBee
+import XBee, ZigBee
 import serial
 
 ser = serial.Serial('/dev/ttyS1', 38400)
