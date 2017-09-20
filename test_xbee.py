@@ -21,8 +21,24 @@ while True:
 
     time.sleep(1)
     reps=[]
-    while ser.inWaiting() > 0::
+    start_b=0
+    start_c=0
+    stop=True
+    while stop:
         s=ser.read(1)
+        if s=0x7e:
+            resps=[]
+            start_b=1
+            start_c=0
+        else if start_b=1:
+            start_b=2
+        else if start_b=2:
+            start_b=s
+        else if start_b+1<start_c:
+            start_c=start_c+1 
+            stop=False
+            start_b=0
+            start_c=0    
         reps.append(s)
         #if s = 0x
     #bytesToRead = ser.inWaiting()
