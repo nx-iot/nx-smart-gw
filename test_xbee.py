@@ -15,6 +15,7 @@ str_cmd=0
 
 while True:
     if str_cmd < 3:
+        print COMMAND[str_cmd]
         ser.write(COMMAND[str_cmd])
         str_cmd=str_cmd+1
 
