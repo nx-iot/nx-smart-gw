@@ -19,7 +19,12 @@ while True:
         str_cmd=str_cmd+1
 
     time.sleep(1)
+    reps=[]
+    while ser.inWaiting() > 0::
+        s=ser.read(1)
+        reps.append(s)
+        #if s = 0x
     #bytesToRead = ser.inWaiting()
     #print bytesToRead
-    reps=ser.read(100)
+    #reps=ser.read(100)
     print reps
